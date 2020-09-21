@@ -2,6 +2,7 @@ package com.luo.algorithm;
 
 import com.luo.algorithm.loopnode.LoopDoubleNode;
 import com.luo.algorithm.loopnode.LoopNode;
+import com.luo.algorithm.recursion.MyRecursion;
 import org.junit.Test;
 
 public class TestLoopNode {
@@ -29,5 +30,24 @@ public class TestLoopNode {
         LoopDoubleNode loopDoubleNode2 = new LoopDoubleNode(2);
         LoopDoubleNode loopDoubleNode3 = new LoopDoubleNode(3);
         LoopDoubleNode loopDoubleNode4 = new LoopDoubleNode(4);
+
+        //测试插入
+       /* loopDoubleNode1.insert(loopDoubleNode2);
+        loopDoubleNode2.insert(loopDoubleNode3);
+        loopDoubleNode3.insert(loopDoubleNode4);
+        System.out.println(loopDoubleNode1.getRear().getData());
+        System.out.println(loopDoubleNode1.getNext().getData());
+        System.out.println(loopDoubleNode2.getRear().getData());
+        System.out.println(loopDoubleNode3.getNext().getData());
+        System.out.println(loopDoubleNode4.getNext().getData());
+        System.out.println(loopDoubleNode4.getRear().getData());*/
+
+       //测试删除
+        loopDoubleNode1.insert(loopDoubleNode2);
+        loopDoubleNode2.insert(loopDoubleNode3);
+        loopDoubleNode3.insert(loopDoubleNode4);
+        loopDoubleNode1.removeNext();
+        System.out.println(loopDoubleNode1.getNext().getData());
+        System.out.println(loopDoubleNode3.getRear().getData());
     }
 }
