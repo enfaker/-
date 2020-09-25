@@ -51,7 +51,7 @@ public class MyRecursion {
     public static void hanoi(int n, char from, char middle ,char to){
         //如果只有一个圆环需要移动，这也为递归的出口
         if (n==1){
-            System.out.println("第一个圆环从"+from+"移到"+to);
+            System.out.println("第1个圆环从"+from+"移到"+to);
         }else {
             //把最下面的圆环上面的所有圆环移动中间
             hanoi(n-1,from,to,middle);
